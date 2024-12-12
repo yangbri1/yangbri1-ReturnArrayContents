@@ -32,6 +32,24 @@ public class Lab {
      * @return a string representation of all values of nums, with the values separated by spaces.
      */
     public String arrayToString(int[] nums){
-        return "";
+        // declare an empty String for 'char' elem to append to & return
+        String returnStr = "";
+        
+        // iterate through an array of 'int' using for-each loop
+        for(int elem : nums){
+            // can NOT cast from 'int' to 'String' data type
+            // String temp = (String)elem;
+            
+            // type-cast elem from 'int' to 'String' using String concatenation
+            String temp = elem + " ";
+
+            // recursively appending converted elem from 'int' -> 'String' to previously declared empty String
+            returnStr += temp;
+        }
+
+        // Extra: use String.trim() method to remove trailing whitespaces ' ' from ONLY beginning and end of String
+        String returnStrTrimmed = returnStr.trim();
+        
+        return returnStrTrimmed;
     }
 }
